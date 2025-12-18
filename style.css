@@ -1,6 +1,6 @@
 /* Body background */
 body {
-    background-image: url('/images/hello.webp'); /* replace with your image */
+    background-image: url('./images/hello.webp'); /* replace with your image */
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
