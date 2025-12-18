@@ -1,0 +1,152 @@
+/* Body background */
+body {
+    background-image: url('/images/hello.webp'); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container */
+.main-container {
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    
+    color: rgb(165, 202, 62);
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Search bar */
+.search input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Current weather section */
+.current-weather {
+    background: rgba(255,255,255,0.1);
+    opacity: 0.9;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Left and right info */
+.left-info, .right-info {
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+/* Left info */
+.left-info {
+    width: 60%;
+    gap:3px;
+}
+
+.left-info .day {
+    margin: 0;
+    font-size: 22px;
+}
+
+.left-info .date, .left-info .location {
+    margin: 3px 0;
+    font-size: 14px;
+    padding: 3px;
+}
+
+/* Right info placeholder (temperature, icon, etc.) */
+.right-info {
+    width: 35%;
+    text-align: center;
+}
+
+/* Bottom info (precipitation, humidity, wind) */
+.bottom-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    
+}
+
+.bottom-info h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Forecast cards */
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.forecast .card {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.forecast .card:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.forecast .card.active {
+    border: 2px solid #4caf50;
+}
+/* For tablets and mobile devices */
+@media (max-width: 768px) {
+    .left-info, .right-info {
+        width: 100%;       /* take full width */
+        text-align: center; /* center content */
+        display: block;     /* stack vertically */
+        margin-bottom: 15px;
+    }
+
+    .bottom-info {
+        flex-direction: column; /* stack bottom info */
+        gap: 10px;
+    }
+
+    .forecast {
+        flex-direction: column; /* stack forecast cards */
+        gap: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .search input[type="text"] {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .forecast .card {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
