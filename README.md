@@ -52,6 +52,10 @@ cd Weather-App
 
 4. Enter a city name and press Enter to view weather information.
 
+##  Screenshot
+
+![Weather App Preview](images/weather-app-preview.png)
+
 
 ## 📬 Connect with Me
 
